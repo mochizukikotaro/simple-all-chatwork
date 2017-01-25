@@ -20,6 +20,6 @@ window.onload = function(){
       }
     });
 
-    chatwork_textbox.value = mentions + "\n" + chatwork_textbox.value;
+    chatwork_textbox.value = mentions + '\n' + chatwork_textbox.value;
   })
 }
