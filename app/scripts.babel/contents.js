@@ -17,7 +17,10 @@ window.onload = function(){
 
   chatwork_textbox.addEventListener('keyup', function(e){
     if (/[@＠]{2}/.test(e.target.value)) {
+      $("#_to")[0].click();
+      $("#_to")[0].click();
       chatwork_textbox.value = mention()
+      chatwork_textbox.focus()
     }
   });
 
@@ -29,7 +32,6 @@ window.onload = function(){
         mentions += '[To:'+number+']';
       }
     });
-
-    return mentions + '\n' + chatwork_textbox.value.replace(/[@＠]{2}/, " ");
+    return mentions + '\n' + chatwork_textbox.value.replace(/[@＠]{2}/, "");
   }
 }
