@@ -7,12 +7,22 @@ window.onload = function(){
   content.appendChild(text)
   div.appendChild(content)
 
+  var chatwork_textbox=document.getElementById('_chatText');
 
   document.getElementById('SimpleAllBtn').addEventListener('click', () => {
+    chatwork_textbox.value = mention()
+    chatwork_textbox.click()
+    chatwork_textbox.focus()
+  })
 
-    let chatwork_textbox=document.getElementById('_chatText');
+  chatwork_textbox.addEventListener('keyup', function(e){
+    if (/[@＠]{2}/.test(e.target.value)) {
+      chatwork_textbox.value = mention()
+    }
+  });
+
+  function mention(){
     let mentions = '';
-
     document.querySelectorAll('[data-cwui-lt-value]').forEach((v) => {
       var number = v.getAttribute('data-cwui-lt-value');
       if(number !== null){
@@ -20,8 +30,6 @@ window.onload = function(){
       }
     });
 
-    chatwork_textbox.value = mentions + '\n' + chatwork_textbox.value;
-    chatwork_textbox.click();
-    chatwork_textbox.focus();
-  })
+    return mentions + '\n' + chatwork_textbox.value.replace(/[@＠]{2}/, " ");
+  }
 }
