@@ -6,7 +6,8 @@ dist
 app/bower_components
 test/bower_components
 package
-app/scripts/*
+app/scripts/
+app/styles/
 app.zip
 app.crx
 app.pem
