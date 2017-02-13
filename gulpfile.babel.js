@@ -137,7 +137,7 @@ gulp.task('package', function () {
 
 gulp.task('build', (cb) => {
   runSequence(
-    'lint', 'babel', 'chromeManifest',
+    'lint', 'babel', 'scss', 'chromeManifest',
     ['html', 'images', 'extras'],
     'size', cb);
 });
