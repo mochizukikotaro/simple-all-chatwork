@@ -1,6 +1,6 @@
 'use strict'
 
-window.addEventListener('load', set_simple_all(), false)
+window.addEventListener('DOMContentLoaded', set_simple_all(), false)
 
 function set_simple_all(){
   const div = document.getElementById('_toList')
