@@ -1,5 +1,8 @@
 'use strict'
-window.onload = function(){
+
+window.addEventListener('DOMContentLoaded', set_simple_all(), false)
+
+function set_simple_all(){
   const div = document.getElementById('_toList')
   var content  = document.createElement('div')
   var text     = document.createTextNode('Simpleにすべて選択')
