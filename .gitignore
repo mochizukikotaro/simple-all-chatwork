@@ -8,7 +8,7 @@ test/bower_components
 package
 app/scripts/
 app/styles/
-app.zip
-app.crx
-app.pem
+app.zip*
+app.crx*
+app.pem*
 .DS_Store

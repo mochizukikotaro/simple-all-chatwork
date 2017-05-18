@@ -6,7 +6,6 @@ function set_simple_all(){
   const div = document.getElementById('_toList')
   var content  = document.createElement('div')
   var text     = document.createTextNode('Simpleにすべて選択')
-  var poweredby = '\n[hr]-- Simple All Chatworkから送信\nhttps://chrome.google.com/webstore/detail/simple-all-chatwork/pdaoeafgcfegogliddglbpocnlbcjeoh';
 
   content.setAttribute('id', 'SimpleAllBtn')
   content.appendChild(text)
@@ -26,7 +25,7 @@ function set_simple_all(){
 
     let messageBody = mentions + '\n' + chatwork_textbox.value;
 
-    chatwork_textbox.value = messageBody + '\n' + poweredby;
+    chatwork_textbox.value = messageBody;
     chatwork_textbox.click();
     chatwork_textbox.focus();
     chatwork_textbox.selectionStart = chatwork_textbox.selectionEnd = messageBody.length;

@@ -1,3 +1,3 @@
 var scriptElement = document.createElement('script');
-scriptElement.setAttribute('src', chrome.extension.getURL('scripts/contents.js'));
+scriptElement.setAttribute('src', chrome.runtime.getURL('scripts/contents.js'));
 document.documentElement.appendChild(scriptElement);
